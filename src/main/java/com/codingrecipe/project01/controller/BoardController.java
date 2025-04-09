@@ -1,6 +1,7 @@
 package com.codingrecipe.project01.controller;
 
 import com.codingrecipe.project01.dto.BoardDTO;
+import com.codingrecipe.project01.dto.PageDTO;
 import com.codingrecipe.project01.service.BoardService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -82,6 +83,13 @@ public class BoardController {
 
         List<BoardDTO> pagingList = boardService.pagingList(page);
         System.out.println("pagingList = " + pagingList);
-        return "index";
+
+        PageDTO pageDTO = boardService.pagingParam(page);
+        model.addAttribute("boardList", pagingList);
+        model.addAttribute("paging", pageDTO);
+        return "paging";
     }
+
+
+
 }

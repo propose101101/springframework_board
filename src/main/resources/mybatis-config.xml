@@ -4,5 +4,6 @@
 <configuration>
     <typeAliases>
         <typeAlias type="com.codingrecipe.project01.dto.BoardDTO" alias="board"></typeAlias>
+        <typeAlias type="com.codingrecipe.project01.dto.CommentDTO" alias="comment"></typeAlias>
     </typeAliases>
 </configuration>

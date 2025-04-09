@@ -32,5 +32,9 @@
         select * from board_table order by 1 desc limit #{start}, #{limit}
     </select>
 
+    <select id="boardCount" resultType="Integer">
+        select count(id) as cnt from board_table
+    </select>
+
 
 </mapper>
